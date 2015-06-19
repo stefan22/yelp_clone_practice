@@ -31,6 +31,6 @@ feature 'restaurants' do
         expect(current_path).to eq '/restaurants'
     end
   end
-  
+
 
 end
