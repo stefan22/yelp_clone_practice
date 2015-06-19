@@ -8,4 +8,17 @@ feature 'restaurants' do
       expect(page).to have_content 'Add a restaurant'
     end
   end
+
+  context 'restarants have been added' do
+    before do
+        Restaurant.create(name: 'KFC')
+    end
+
+    scenario 'display restaurants' do
+      visit '/restarants'
+      expect(page).to have_content 'KFC'
+      expect(page).not_to have_content 'No restaurants yet'
+    end
+  end
+
 end
