@@ -62,5 +62,7 @@ feature 'restaurants' do
       visit '/restaurants'
       click_link 'Delete KFC'
       expect(page).not_to have_content 'KFC'
-      expect(page).to have_content 'Restaurant deleted successfully'
+      expect(page).to have_content 'Restaurant deleted success'
+    end
+  end
 end
